@@ -8,10 +8,10 @@
             >Ranking</span
           >
         </th>
-        <th>Nombre</th>
-        <th>Precio</th>
-        <th>Cap. de Mercado</th>
-        <th>Variacion 24hs</th>
+        <th>Coin</th>
+        <th>Price</th>
+        <th>Capital</th>
+        <th>Variation/24h</th>
         <td class="hidden sm:block">
           <input
             class="bg-gray-100 focus:outline-none border-b border-gray-400 py-2 px-4 block w-full appearance-none leading-normal"
