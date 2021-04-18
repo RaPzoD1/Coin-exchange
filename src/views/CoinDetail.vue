@@ -28,27 +28,27 @@
               <span> #{{ asset.rank }} </span>
             </li>
             <li class="flex justify-between">
-              <b class="text-gray-600 mr-10 uppercase">Precio actual</b>
+              <b class="text-gray-600 mr-10 uppercase">Actual Price</b>
               <span>
                 {{ asset.priceUsd | dollar }}
               </span>
             </li>
             <li class="flex justify-between">
-              <b class="text-gray-600 mr-10 uppercase">Precio más bajo</b>
+              <b class="text-gray-600 mr-10 uppercase">Lowest Price</b>
               <span>
                 {{ min | dollar }}
               </span>
             </li>
             <li class="flex justify-between">
-              <b class="text-gray-600 mr-10 uppercase">Precio más alto</b>
+              <b class="text-gray-600 mr-10 uppercase">Hightest Price</b>
               <span>{{ max | dollar }}</span>
             </li>
             <li class="flex justify-between">
-              <b class="text-gray-600 mr-10 uppercase">Precio Promedio</b>
+              <b class="text-gray-600 mr-10 uppercase">Average Price</b>
               <span>{{ avg | dollar }} </span>
             </li>
             <li class="flex justify-between">
-              <b class="text-gray-600 mr-10 uppercase">Variación 24hs</b>
+              <b class="text-gray-600 mr-10 uppercase">Variation 24hs</b>
               <span>
                 {{ asset.changePercent24Hr | percent }}
               </span>
@@ -88,7 +88,7 @@
         :data="history.map(h => [h.date, parseFloat(h.priceUsd).toFixed(2)])"
       />
 
-      <h3 class="text-xl my-10">Mejores Ofertas de Cambio</h3>
+      <h3 class="text-xl my-10">Best exchange offers</h3>
       <table>
         <tr
           v-for="m in markets"
@@ -108,7 +108,7 @@
               v-if="!m.url"
               @custom-click="getWebSite(m)"
             >
-              <slot>Obtener Link</slot>
+              <slot>Get Link</slot>
             </px-button>
             <a
               :href="m.url"

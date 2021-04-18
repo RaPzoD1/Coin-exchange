@@ -67,7 +67,7 @@
         </td>
         <td class="hidden sm:block">
           <px-button @custom-click="goToCoin(a.id)">
-            <span> Detalle </span>
+            <span> Detail </span>
           </px-button>
         </td>
       </tr>
