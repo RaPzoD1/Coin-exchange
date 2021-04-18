@@ -1,7 +1,7 @@
 <template>
   <div class="flex-col">
     <div class="flex justify-center">
-      <BeatLoader :loading="isLoading" :color="'#68d391'" :size="50" />
+      <BeatLoader :loading="isLoading" :color="'#3F55FF'" :size="50" />
     </div>
     <template v-if="!isLoading">
       <div class="flex flex-col sm:flex-row justify-around items-center">
@@ -59,9 +59,9 @@
         <div class="my-10 sm:mt-0 flex flex-col justify-center text-center">
           <button
             @click="toggleConverter"
-            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
-            {{fromUsd ? `USD a ${asset.symbol}`:`${asset.symbol} a USD`}}
+            {{ fromUsd ? `USD a ${asset.symbol}` : `${asset.symbol} a USD` }}
           </button>
 
           <div class="flex flex-row my-5">
@@ -75,7 +75,9 @@
             </label>
           </div>
 
-          <span class="text-xl">{{ convertResult }} {{ fromUsd ? asset.symbol : 'USD'}}</span>
+          <span class="text-xl"
+            >{{ convertResult }} {{ fromUsd ? asset.symbol : 'USD' }}</span
+          >
         </div>
       </div>
       <line-chart
@@ -108,7 +110,11 @@
             >
               <slot>Obtener Link</slot>
             </px-button>
-            <a v-else class="hover:underline text-green-600" target="_blanck"
+            <a
+              :href="m.url"
+              v-else
+              class="hover:underline text-green-600"
+              target="_blank"
               >{{ m.url }}
             </a>
           </td>
@@ -218,5 +224,5 @@ export default {
 td {
   padding: 10px;
   text-align: center;
-} 
+}
 </style>

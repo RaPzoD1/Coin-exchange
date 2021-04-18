@@ -15,7 +15,7 @@ export default {
   components: {
     PxHeader
   },
-  data(){
+  data() {
     return {
       links: [
         {
