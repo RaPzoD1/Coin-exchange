@@ -1,6 +1,6 @@
 <template>
   <div class='flex justify-center'>
-    <BeatLoader :loading="isLoading" :color="'#68d391'" :size="50" />
+    <BeatLoader :loading="isLoading" :color="'#3F55FF'" :size="50" />
     <px-assets-table v-if="!isLoading" :assets="assets" />
   </div>
 </template>
